@@ -1,10 +1,11 @@
 const mysql =require('mysql2');
 
+console.log("connecting...");
 
 //pool creation_all in javascript written as json
 const pool=mysql.createPool({
 host:'localhost',
-user:'root',
+user:'sumit',
 password:'root123',
 database:'gaana',
 waitForConnection:true,
