@@ -63,7 +63,7 @@ router.delete('/delete/:id',(req,res)=>{
     })
 })
 
-router.get('/display',(req,res)=>{
+router.get('/',(req,res)=>{
    const query=`select * from user;`;
     db.query(query,(err,rslt)=>{
         if(err){
