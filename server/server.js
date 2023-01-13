@@ -17,6 +17,7 @@ const routeartist=require('./routes/artist')
 //homepage loading
  app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyparser.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors('*'));
 
 //routers

@@ -53,6 +53,7 @@ db.query(query,(error,result)=>{
 });
 
 router.delete('/delete/:id',(req,res)=>{
+    
     const {id}=req.params;
     const query=`delete from user where id=${id}`
     db.query(query,(err,rslt)=>{
