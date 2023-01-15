@@ -8,6 +8,8 @@ const upload=multer({dest:'uploads/'});
 
 
 router.delete('/delete/:id',(req,res)=>{
+    console.log(req.params)
+    console.log(req.body)
     const {id}=req.params;
     const query=`delete from artist where id=${id}`
     db.query(query,(err,rslt)=>{

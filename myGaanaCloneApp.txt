@@ -1,0 +1,32 @@
+  //addartist function form
+    const addartist=()=>{
+<h4>adding artist</h4>
+axios.post(url+'/add').then((result)=>{
+  if(result){
+    console.log("The artist has been added...");
+  navigate('/artist')}
+    
+      console.log("some error occurred")
+    
+  
+})}
+
+
+//
+alter table songs
+  modify constraint fk_id
+  foreign key (artistid)
+  references artist (id) on delete cascade on update cascade;
+
+
+//
+
+ALTER TABLE songs
+drop CONSTRAINT artistid foreign key;
+
+ALTER TABLE songs
+ADD CONSTRAINT foreign key
+    FOREIGN KEY (artistid)
+    REFERENCES artist
+        (id)
+    ON DELETE CASCADE ON UPDATE NO ACTION;

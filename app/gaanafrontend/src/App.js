@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import React,{component} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter,Link,Route,Routes} from 'react-router-dom';
 import './App.css';
 import Signin from './pages/Signin';

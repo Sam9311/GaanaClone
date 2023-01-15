@@ -8,7 +8,7 @@ create table artist(id integer primary key auto_increment, fname varchar(40), ln
 created_timestamp TIMESTAMP default CURRENT_TIMESTAMP);
 
 #songs table
-create table songs (id integer primary key auto_increment,title varchar(50), thumbnail varchar(40), duration varchar(10),artistid ine,constraint fk foreign key (artistid) references artist(id), created_timestamp TIMESTAMP default CURRENT_TIMESTAMP);
+create table songs (id integer primary key auto_increment,title varchar(50), thumbnail varchar(40), duration varchar(10),artistid integer,constraint fk foreign key (artistid) references artist(id) on delete cascade on update cascade, created_timestamp TIMESTAMP default CURRENT_TIMESTAMP);
 
 #albums table
 create table album (id integer primary key auto_increment, title varchar(40), thumbnail varchar(40), duration varchar(10), created_timestamp TIMESTAMP default CURRENT_TIMESTAMP);
